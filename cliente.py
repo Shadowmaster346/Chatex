@@ -38,7 +38,7 @@ my_msg = tkinter.StringVar()  # For the messages to be sent.
 my_msg.set("Пиши свое сообщение тут.")
 scrollbar = tkinter.Scrollbar(messages_frame)  # To navigate through past messages.
 # Following will contain the messages.
-msg_list = tkinter.Listbox(messages_frame, height=50, width=70, yscrollcommand=scrollbar.set)
+msg_list = tkinter.Listbox(messages_frame, height=30, width=50, yscrollcommand=scrollbar.set)
 scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
 msg_list.pack(side=tkinter.LEFT, fill=tkinter.BOTH)
 msg_list.pack()
@@ -53,10 +53,10 @@ send_button.pack()
 top.protocol("WM_DELETE_WINDOW", on_closing)
 
 #----Now comes the sockets part----
-HOST = input'142.93.34.245'
-PORT = input 19133
+HOST = '142.93.34.245'
+PORT = 19133
 if not PORT:
-    PORT = 33000
+    PORT = 19133
 else:
     PORT = int(PORT)
 
